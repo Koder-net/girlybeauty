@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #954558;
+  --color-primary-container: #d4788c;
+  --color-primary-fixed: #ffd9df;
+  --color-primary-fixed-dim: #ffb1c0;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #551327;
+  --color-on-primary-fixed-variant: #772e41;
+
+  --color-surface: #fff8f8;
+  --color-surface-bright: #fff8f8;
+  --color-surface-dim: #e4d7d9;
+  --color-surface-container: #f8eaed;
+  --color-surface-container-low: #fef0f3;
+  --color-surface-container-high: #f3e5e7;
+  --color-surface-container-highest: #eddfe2;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #211a1c;
+  --color-on-surface-variant: #534245;
+
+  --color-secondary: #635d59;
+  --color-secondary-container: #e7ded9;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #68615e;
+
+  --color-outline: #867275;
+  --color-outline-variant: #d8c1c4;
+
+  --color-tertiary: #1b6d24;
+  --color-tertiary-container: #55a454;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  
+  --color-inverse-surface: #362e30;
+  --color-inverse-primary: #ffb1c0;
+  --color-inverse-on-surface: #fbedf0;
+
+  --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --background: #fff8f8;
+  --foreground: #211a1c;
+}
+
+body {
+  background-color: #fff8f8;
+  color: #211a1c;
+  font-family: var(--font-jakarta), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8eaed;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4788c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #954558;
+}
+
+/* Soft shimmer animation for luxury effect */
+@keyframes softShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: softShimmer 2.5s infinite;
+}
